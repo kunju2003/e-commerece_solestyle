@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shoe website</title>
+    <!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS and jQuery (for Bootstrap 4, you need jQuery) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
@@ -12,10 +19,10 @@
     
     <nav>
         <ul>
-            <li><a href="#new">New</a></li>
-            <li><a href="#women">Women</a></li>
-            <li><a href="#Men">Men</a></li>
-            <li><a href="#Kids">Kids</a></li>
+            <li><a href="#new">New</a></li>&nbsp;&nbsp;
+            <li><a href="#women">Women</a></li>&nbsp;&nbsp;
+            <li><a href="#Men">Men</a></li>&nbsp;&nbsp;
+            <li><a href="#Kids">Kids</a></li>&nbsp;&nbsp;
             </ul>
     </nav>
     <div class="right">
@@ -26,6 +33,29 @@
         
     </div>
 </header>
-
+<div id="carouselExampleAutoplay" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner bg-black">
+      <div class="carousel-item active bg-warning display-flex justify-content-center " >
+        <!-- <img src="../static/images/img_bg_1.jpg" class="d-block w-100" alt="Image 1" width="900" height="900"> -->
+         <h6 class="text-center fw-bold pl-3">New Style On Sale:Up Yo 40% Off </h6>
+         <p class="text-center ">Shop All Our New Markdowns</p>
+      </div>
+      <div class="carousel-item active bg-warning">
+        <!-- <img src="../static/images/img_bg_2.jpg" class="d-block w-100" alt="Image 2"> -->
+      </div>
+      <div class="carousel-item">
+        <!-- <img src="image3.jpg" class="d-block w-100" alt="Image 3"> -->
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleAutoplay" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleAutoplay" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  
 </body>
 </html>

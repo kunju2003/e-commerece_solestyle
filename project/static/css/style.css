@@ -27,11 +27,12 @@ header nav ul{
     list-style: none;
 }
 header nav ul li{
-    margin: 0 15px;
+    margin: 0 30px;
 }
 header nav ul li a{
     text-decoration: none;
     color: white;
+    
 }
 .right{
     display: flex;
