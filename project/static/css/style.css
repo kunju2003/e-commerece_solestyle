@@ -153,3 +153,123 @@ header nav ul li a{
   
   footer .social-media a {
     margin: 0 10px;}
+
+    * General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero section styles */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: url('hero-bg.jpg') no-repeat center center/cover;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin: 10px 0 20px;
+}
+
+.hero .cta {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ff5722;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+
+/* Products section styles */
+.products {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.products h2 {
+  margin-bottom: 20px;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product h3 {
+  margin: 10px 0;
+}
+
+.product button {
+  background: #ff5722;
+ 
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+}
