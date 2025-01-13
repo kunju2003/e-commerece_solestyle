@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Store - Add to Cart</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background:linear-gradient(to bottom,white,black);">
+    <div style="width: 80%; margin: auto; overflow: hidden;">
+        <h1 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;">Solestyle</h1>
+
+        <!-- Shoes List -->
+        <div style="background: #fff; margin: 10px 0; padding: 15px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); display: flex; justify-content: space-between; align-items: center;">
+            <img src="shoe1.jpg" alt="Shoe 1" style="width: 100px; height: auto; border-radius: 5px;">
+            <div style="flex: 1; margin-left: 20px;">
+                <h3 style="margin: 0; color: #333;">Running Shoe</h3>
+                <p style="margin: 5px 0; color: #666;">Price: $100</p>
+            </div>
+            <button onclick="addToCart('Running Shoe', 100)" style="padding: 10px 20px; background: #4CAF50; color: #fff; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s;">Add to Cart</button>
+        </div>
+
+        <div style="background: #fff; margin: 10px 0; padding: 15px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); display: flex; justify-content: space-between; align-items: center;">
+            <img src="shoe2.jpg" alt="Shoe 2" style="width: 100px; height: auto; border-radius: 5px;">
+            <div style="flex: 1; margin-left: 20px;">
+                <h3 style="margin: 0; color: #333;">Casual Sneaker</h3>
+                <p style="margin: 5px 0; color: #666;">Price: $80</p>
+            </div>
+            <button onclick="addToCart('Casual Sneaker', 80)" style="padding: 10px 20px; background: #4CAF50; color: #fff; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s;">Add to Cart</button>
+        </div>
+
+        <!-- Cart Section -->
+        <div style="margin-top: 20px; padding: 10px; background: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <h2 style="margin-top: 0;">Your Cart</h2>
+            <ul id="cart-items" style="list-style: none; padding: 0;">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <p id="total-amount" style="font-weight: bold; margin-top: 10px;">Total: $0</p>
+            <button onclick="placeOrder()" style="padding: 10px 20px; background: #008CBA; color: #fff; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; margin-top: 10px;">Place Order</button>
+        </div>
+    </div>
+
+    <script>
+        let totalAmount = 0;
+
+        function addToCart(name, price) {
+            const cartItems = document.getElementById('cart-items');
+            const li = document.createElement('li');
+            li.textContent = `${name} - $${price}`;
+            li.style.padding = '5px 0';
+            li.style.borderBottom = '1px solid #ddd';
+
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.style.marginLeft = '10px';
+            removeButton.style.padding = '5px 10px';
+            removeButton.style.background = '#f44336';
+            removeButton.style.color = '#fff';
+            removeButton.style.border = 'none';
+            removeButton.style.borderRadius = '5px';
+            removeButton.style.cursor = 'pointer';
+            removeButton.onclick = function () {
+                cartItems.removeChild(li);
+                totalAmount -= price;
+                document.getElementById('total-amount').textContent = `Total: $${totalAmount}`;
+            };
+
+            li.appendChild(removeButton);
+            cartItems.appendChild(li);
+
+            totalAmount += price;
+            document.getElementById('total-amount').textContent = `Total: $${totalAmount}`;
+        }
+
+        function placeOrder() {
+            if (totalAmount === 0) {
+                alert('Your cart is empty. Please add items to your cart before placing an order.');
+            } else {
+                alert(`Your order has been placed successfully! Total amount: $${totalAmount}`);
+                document.getElementById('cart-items').innerHTML = '';
+                totalAmount = 0;
+                document.getElementById('total-amount').textContent = `Total: $${totalAmount}`;
+            }
+        }
+    </script>
+</body>
+</html>

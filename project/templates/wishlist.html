@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Wishlist</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            /* background-color: #f4f4f4; */
+            background: linear-gradient(to bottom,white,black);
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .shoe {
+            background: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .shoe img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+        }
+        .shoe-info {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .shoe-info h3 {
+            margin: 0;
+            color: #333;
+        }
+        .shoe-info p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .wishlist-button {
+            padding: 10px 20px;
+            background: #ff6f61;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .wishlist-button:hover {
+            background: #e65c50;
+        }
+        .wishlist {
+            margin-top: 20px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .wishlist h2 {
+            margin-top: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .wishlist ul{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Solestyle Wishlist</h1>
+
+        <!-- Shoes List -->
+        <div class="shoe" data-id="1">
+            <img src="shoe1.jpg" alt="Shoe 1">
+            <div class="shoe-info">
+                <h3>Running Shoe</h3>
+                <p>Price: $100</p>
+            </div>
+            <button class="wishlist-button">Add to Wishlist</button>
+        </div>
+
+        <div class="shoe" data-id="2">
+            <img src="shoe2.jpg" alt="Shoe 2">
+            <div class="shoe-info">
+                <h3>Casual Sneaker</h3>
+                <p>Price: $80</p>
+            </div>
+            <button class="wishlist-button">Add to Wishlist</button>
+        </div>
+
+         <!-- Wishlist Section  -->
+        <div class="wishlist">
+            <h2>Your Wishlist</h2>
+            <ul id="wishlist-items">
+                 Wishlist items will be dynamically added here 
+            </ul>
+        </div> 
+    </div>
+
+    <script>
+        const wishlist = [];
+
+        document.querySelectorAll('.wishlist-button').forEach(button => {
+            button.addEventListener('click', event => {
+                const shoeElement = event.target.closest('.shoe');
+                const shoeId = shoeElement.dataset.id;
+                const shoeName = shoeElement.querySelector('h3').textContent;
+                const shoePrice = shoeElement.querySelector('p').textContent;
+
+                if (!wishlist.find(item => item.id === shoeId)) {
+                    wishlist.push({ id: shoeId, name: shoeName, price: shoePrice });
+                    updateWishlistUI();
+                } else {
+                    alert(`${shoeName} is already in your wishlist.`);
+                }
+            });
+        });
+
+        function updateWishlistUI() {
+            const wishlistItems = document.getElementById('wishlist-items');
+            wishlistItems.innerHTML = '';
+
+            wishlist.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - ${item.price}`;
+                wishlistItems.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>

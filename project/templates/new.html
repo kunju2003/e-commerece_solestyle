@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoe Website - New Arrivals</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">SOLESTYLE</div>&nbsp;&nbsp;
+        
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="new.html">New</a></li>&nbsp;&nbsp;
+                <li><a href="women.html">Women</a></li>&nbsp;&nbsp;
+                <li><a href="men.html">Men</a></li>&nbsp;&nbsp;
+                <li><a href="kids.html">Kids</a></li>&nbsp;&nbsp;
+                </ul>
+        </nav>
+        <div class="right">
+            <input type="text" placeholder="search">
+            <a href="#wishlist"><img src="../static/images/icons8-heart-24.png" alt=""></a>&nbsp;&nbsp;&nbsp;
+            <a href="#cart"><img src="../static/images/icons8-shopping-cart-24.png" alt=""></a>&nbsp;&nbsp;
+            <a href="#account"><img src="../static/images/icons8-customer-24.png" alt=""></a>
+            
+        </div>
+    </header>
+    
+  <!-- New Arrivals Section -->
+  <section id="new-arrivals" style="padding: 30px; background-color: #f9f9f9;">
+    <h2 style="text-align: center; font-size: 2rem; color: #333;">New Arrivals</h2>
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+      <!-- Shoe 1 -->
+      <div style="background-color:grey; border: 1px solid #ddd; border-radius: 8px; width: 250px; padding: 15px; text-align: center; transition: transform 0.3s ease;">
+        <img src="../static/images/download.avif" alt="Classic Sneakers" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 10px; ">
+        <h3 style="font-size: 1.2rem; color:white;">Classic Sneakers</h3>
+        <p style="font-size: 1rem; color:white;">₹2850</p>
+        <a href="product1.html" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px;">Buy Now</a>
+      </div>
+
+      <!-- Shoe 2 -->
+      <div style="background-color:grey; border: 1px solid #ddd; border-radius: 8px; width: 250px; padding: 15px; text-align: center; transition: transform 0.3s ease;">
+        <img src="../static/images/r3.avif" alt="Running Shoes" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 10px;">
+        <h3 style="font-size: 1.2rem; color:white;">Running Shoes</h3>
+        <p style="font-size: 1rem; color: white;">₹2579</p>
+        <a href="product2.html" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px;">Buy Now</a>
+      </div>
+
+      <!-- Shoe 3 -->
+      <div style="background-color:grey; border: 1px solid #ddd; border-radius: 8px; width: 250px; padding: 15px; text-align: center; transition: transform 0.3s ease;">
+        <img src="../static/images/b1.avif" alt="Stylish Boots" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 10px;">
+        <h3 style="font-size: 1.2rem; color:white;">Stylish Boots</h3>
+        <p style="font-size: 1rem; color: white;">₹999</p>
+        <a href="product3.html" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px;">Buy Now</a>
+      </div>
+      <div style="background-color: grey; border: 1px solid #ddd; border-radius: 8px; width: 250px; padding: 15px; text-align: center; transition: transform 0.3s ease;">
+        <img src="../static/images/feature-HTJS0040146.jpg" alt="Stylish Boots" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 10px;">
+        <h3 style="font-size: 1.2rem; color:white;">Sandals</h3>
+        <p style="font-size: 1rem; color:white;">₹329</p>
+        <a href="product3.html" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px;">Buy Now</a>
+      </div>
+      <div style="background-color:grey; border: 1px solid #ddd; border-radius: 8px; width: 250px; padding: 15px; text-align: center; transition: transform 0.3s ease;">
+        <img src="../static/images/leather-slip-on-shoes-1.avif" alt="Stylish Boots" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 10px;">
+        <h3 style="font-size: 1.2rem; color:white;">Formal Shoes</h3>
+        <p style="font-size: 1rem; color:white;">₹569</p>
+        <a href="product3.html" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px;">Buy Now</a>
+      </div>
+      <div style="background-color: grey; border: 1px solid #ddd; border-radius: 8px; width: 250px; padding: 15px; text-align: center; transition: transform 0.3s ease;">
+        <img src="../static/images/1500x1500px_Images_72.webp" alt="Stylish Boots" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 10px;">
+        <h3 style="font-size: 1.2rem; color:white;">Sports Shoes</h3>
+        <p style="font-size: 1rem; color: white;">₹888</p>
+        <a href="product3.html" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px;">Buy Now</a>
+      </div>
+      <div style="background-color: grey; border: 1px solid #ddd; border-radius: 8px; width: 250px; padding: 15px; text-align: center; transition: transform 0.3s ease;">
+        <img src="../static/images/UC126_NAVY.webp" alt="Stylish Boots" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 10px;">
+        <h3 style="font-size: 1.2rem; color:white;">Loafers</h3>
+        <p style="font-size: 1rem; color:white;">₹999</p>
+        <a href="product3.html" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px;">Buy Now</a>
+      </div>
+      <div style="background-color:grey; border: 1px solid #ddd; border-radius: 8px; width: 250px; padding: 15px; text-align: center; transition: transform 0.3s ease;">
+        <img src="../static/images/10934500_2.webp" alt="Stylish Boots" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 10px;">
+        <h3 style="font-size: 1.2rem; color:white;">Heels</h3>
+        <p style="font-size: 1rem; color: white;">₹607</p>
+        <a href="product3.html" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px;">Buy Now</a>
+      </div>
+      <div style="background-color: grey; border: 1px solid #ddd; border-radius: 8px; width: 250px; padding: 15px; text-align: center; transition: transform 0.3s ease;">
+        <img src="../static/images/paragon-blot-brown-ultra-comfy-casual-flip-flops-for-women-product-images-rv9g4yb3ls-4-202304151150.webp" alt="Stylish Boots" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 10px;">
+        <h3 style="font-size: 1.2rem; color:white;">Flip Flop</h3>
+        <p style="font-size: 1rem; color: white;">₹299</p>
+        <a href="product3.html" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px;">Buy Now</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -49,9 +49,41 @@ header nav ul li a{
     color: white;
     padding: 2px;
 }
-.category-banner {
+.category-banner2 {
+  text-align: center;
+  background: url('../images/view-shoe-rack-stacking-pair-footwear_23-2150991569.jpg') no-repeat center center/cover;
+  color: black;
+  padding: 100px 20px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.category-banner2 h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.category-banner2 p {
+  font-size: 20px;
+}
+.category-banner1 {
     text-align: center;
-    background: url('../images/female-hands-different-stylish-shoes-260nw-2445641531.webp') no-repeat center center/cover;
+    background: url('../images/baby-clothes-accessories-light-background_73944-15490.jpg') no-repeat center center/cover;
+    color: black;
+    padding: 100px 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .category-banner1 h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .category-banner1 p {
+    font-size: 20px;
+  }
+  .category-banner {
+    text-align: center;
+    background: url('../images/five-colored-pairs-male-leather-shoes-lined-up-row-wooden-floor-realistic-background-vector-illustration_1284-81475.jpg') no-repeat center center/cover;
     color: black;
     padding: 100px 20px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
